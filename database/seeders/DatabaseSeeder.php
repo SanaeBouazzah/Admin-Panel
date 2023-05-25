@@ -21,7 +21,7 @@ class DatabaseSeeder extends Seeder
         Permission::create(['name' => 'edit articles']);
        Permission::create(['name' => 'delete articles']);
        Permission::create(['name' => 'publish articles']);
-      //  Permission::create(['name' => 'unpublish articles']);
+       Permission::create(['name' => 'unpublish articles']);
 
       //  // create roles and assign created permissions
 
