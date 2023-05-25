@@ -27,7 +27,7 @@ class DatabaseSeeder extends Seeder
 
       //  // this can be done as separate statements
        $role = Role::create(['name' => 'writer']);
-      //  $role->givePermissionTo('edit articles');
+       $role->givePermissionTo('edit articles');
 
       //  // or may be done by chaining
       //  $role = Role::create(['name' => 'moderator'])
