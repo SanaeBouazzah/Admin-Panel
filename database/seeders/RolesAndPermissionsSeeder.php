@@ -109,7 +109,7 @@ class RolesAndPermissionsSeeder extends Seeder
         User::create([
             'name' => 'admin',
             'is_admin' => 1,
-            'email' => 'admin@admin.com',
+            'email' => 'admin@gmail.com',
             'email_verified_at' => now(),
             'password' => Hash::make('password'),
             'remember_token' => Str::random(10),
