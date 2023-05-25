@@ -19,7 +19,7 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
         Permission::create(['name' => 'edit articles']);
-      //  Permission::create(['name' => 'delete articles']);
+       Permission::create(['name' => 'delete articles']);
       //  Permission::create(['name' => 'publish articles']);
       //  Permission::create(['name' => 'unpublish articles']);
 
