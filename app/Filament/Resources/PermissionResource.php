@@ -22,7 +22,7 @@ class PermissionResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-key';
 
-    protected static ?string $navigateGroup 
+    protected static ?string $navigateGroup = 'AdminManagement';
 
     public static function form(Form $form): Form
     {
