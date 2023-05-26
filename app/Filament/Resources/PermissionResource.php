@@ -24,9 +24,6 @@ class PermissionResource extends Resource
     {
         return $form
             ->schema([
-                TextColumn::make('id')->sortable(),
-                TextColumn::make('name')->sortable()->searchable(),
-                TextColumn::make('created_at')->dateTime('d-M-YGV5-4')->sortable()->searchable(),
             ]);
     }
 
@@ -34,7 +31,9 @@ class PermissionResource extends Resource
     {
         return $table
             ->columns([
-                //
+              TextColumn::make('id')->sortable(),
+              TextColumn::make('name')->sortable()->searchable(),
+              TextColumn::make('created_at')->dateTime('d-M-YGV5-4')->sortable()->searchable(),
             ])
             ->filters([
                 //
