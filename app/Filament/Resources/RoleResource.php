@@ -8,12 +8,14 @@ use Filament\Resources\Form;
 use Filament\Resources\Table;
 use Filament\Resources\Resource;
 use Spatie\Permission\Models\Role;
+use Filament\Forms\Components\Card;
 use Filament\Tables\Columns\TextColumn;
+use Filament\Forms\Components\TextInput;
+use Filament\Pages\Actions\DeleteAction;
 use Illuminate\Database\Eloquent\Builder;
 use App\Filament\Resources\RoleResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use App\Filament\Resources\RoleResource\RelationManagers;
-use Filament\Pages\Actions\DeleteAction;
 
 class RoleResource extends Resource
 {
@@ -27,7 +29,7 @@ class RoleResource extends Resource
             ->schema([
               Card::make()
               ->schema([
-                TextInput::make('name')->unique()->required()
+                TextInput::make('name'),
                 ])
             ]);
     }
