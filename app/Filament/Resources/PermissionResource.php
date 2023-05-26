@@ -26,7 +26,7 @@ class PermissionResource extends Resource
             ->schema([
                 TextColumn::make('id')->sortable(),
                 TextColumn::make('name')->sortable()->searchable(),
-                TextColumn::make('created_at')->sortable()->searchable(),
+                TextColumn::make('created_at')->date()->sortable()->searchable(),
             ]);
     }
 
