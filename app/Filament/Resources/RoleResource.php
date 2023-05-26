@@ -31,7 +31,7 @@ class RoleResource extends Resource
             ->schema([
               Card::make()
               ->schema([
-                TextInput::make('name')->unique()->,
+                TextInput::make('name')->unique()->required(),
                 MultiSelect::make('permissions')
                 ->relationship('permissions', 'name')
                 ->preload(),
