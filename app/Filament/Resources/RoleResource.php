@@ -25,7 +25,10 @@ class RoleResource extends Resource
     {
         return $form
             ->schema([
-                //
+              Card::make()
+              ->schema([
+                TextInput::make('name')->unique()->required()
+                ])
             ]);
     }
 
