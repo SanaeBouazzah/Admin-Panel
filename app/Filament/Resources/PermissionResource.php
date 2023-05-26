@@ -28,7 +28,7 @@ class PermissionResource extends Resource
             ->schema([
               Card::make()
               ->schema([
-                TextInput::make('name')->unique()-
+                TextInput::make('name')->unique()->required()
               ])
             ]);
     }
