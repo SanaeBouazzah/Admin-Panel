@@ -16,7 +16,7 @@ use Illuminate\Database\Eloquent\Builder;
 use Filament\Forms\Components\MultiSelect;
 use App\Filament\Resources\RoleResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
-use App\Filament\Resources\RoleResource\RelationManagers;
+use App\Filament\Resources\RoleResource\RelationManagers\PermissionsRelationManager;
 use Spatie\Permission\Contracts\Permission;
 
 class RoleResource extends Resource
@@ -62,7 +62,7 @@ class RoleResource extends Resource
     public static function getRelations(): array
     {
         return [
-            PermissionSRelationManager::class, 
+          PermissionsRelationManager::class, 
         ];
     }
     
