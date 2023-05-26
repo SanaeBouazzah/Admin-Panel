@@ -7,12 +7,13 @@ use Filament\Tables;
 use Filament\Resources\Form;
 use Filament\Resources\Table;
 use Filament\Resources\Resource;
+use Filament\Forms\Components\Card;
+use Filament\Tables\Columns\TextColumn;
 use Spatie\Permission\Models\Permission;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use App\Filament\Resources\PermissionResource\Pages;
 use App\Filament\Resources\PermissionResource\RelationManagers;
-use Filament\Tables\Columns\TextColumn;
 
 class PermissionResource extends Resource
 {
