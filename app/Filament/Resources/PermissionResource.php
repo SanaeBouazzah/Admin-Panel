@@ -12,6 +12,7 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use App\Filament\Resources\PermissionResource\Pages;
 use App\Filament\Resources\PermissionResource\RelationManagers;
+use Filament\Tables\Columns\TextColumn;
 
 class PermissionResource extends Resource
 {
@@ -23,7 +24,7 @@ class PermissionResource extends Resource
     {
         return $form
             ->schema([
-                //
+                TextColumn::
             ]);
     }
 
