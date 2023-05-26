@@ -34,7 +34,7 @@ class RoleResource extends Resource
                 TextInput::make('name')->unique()->required(),
                 MultiSelect::make('permissions')
                 ->relationship('permissions', 'name')
-                ->preload(),
+                ->preload()->required(),
                 ])
             ]);
     }
