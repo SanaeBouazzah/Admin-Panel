@@ -8,6 +8,7 @@ use Filament\Resources\Form;
 use Filament\Resources\Table;
 use Filament\Resources\Resource;
 use Spatie\Permission\Models\Role;
+use Filament\Tables\Columns\TextColumn;
 use Illuminate\Database\Eloquent\Builder;
 use App\Filament\Resources\RoleResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
@@ -31,7 +32,9 @@ class RoleResource extends Resource
     {
         return $table
             ->columns([
-                //
+              TextColumn::make('id')->sortable(),
+              TextColumn::make('name')->sortable()->searchable(),
+              TextColumn::make('created_at')->dateTime('d-M-YGV5-4')->sortable()->searchable(),
             ])
             ->filters([
                 //
