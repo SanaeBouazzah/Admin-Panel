@@ -12,7 +12,6 @@ use Filament\Tables\Columns\TextColumn;
 use Filament\Forms\Components\TextInput;
 use Spatie\Permission\Models\Permission;
 use Illuminate\Database\Eloquent\Builder;
-use Filament\Forms\Components\MultiSelect;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use App\Filament\Resources\PermissionResource\Pages;
 use App\Filament\Resources\PermissionResource\RelationManagers;
@@ -23,7 +22,7 @@ class PermissionResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-key';
 
-    protected static ?string $navigationGroup = 'Admin Management';
+    protected static ?string $navigationGroup = 'AdminManagement';
 
     public static function form(Form $form): Form
     {
@@ -31,9 +30,7 @@ class PermissionResource extends Resource
             ->schema([
               Card::make()
               ->schema([
-                TextInput::make('name'),
-                MultiSelect::make('permissions')
-                ->relationship('permissions', 'name'),
+                TextInput::make('name')->unique()->required()
               ])
             ]);
     }

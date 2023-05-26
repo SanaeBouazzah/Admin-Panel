@@ -13,6 +13,7 @@ use Filament\Tables\Columns\TextColumn;
 use Filament\Forms\Components\TextInput;
 use Filament\Pages\Actions\DeleteAction;
 use Illuminate\Database\Eloquent\Builder;
+use Filament\Forms\Components\MultiSelect;
 use App\Filament\Resources\RoleResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use App\Filament\Resources\RoleResource\RelationManagers;
@@ -30,6 +31,8 @@ class RoleResource extends Resource
               Card::make()
               ->schema([
                 TextInput::make('name'),
+                MultiSelect::make('permissions')
+                ->relationship('permissions', 'name'),
                 ])
             ]);
     }
