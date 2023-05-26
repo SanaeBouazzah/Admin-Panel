@@ -32,7 +32,8 @@ class PermissionResource extends Resource
               Card::make()
               ->schema([
                 TextInput::make('name'),
-                MultiSelect::make('permission'),
+                MultiSelect::make('permissions')
+                ->relationship('permissions', 'name'),
               ])
             ]);
     }
