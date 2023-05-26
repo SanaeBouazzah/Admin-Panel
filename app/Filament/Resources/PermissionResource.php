@@ -27,7 +27,9 @@ class PermissionResource extends Resource
         return $form
             ->schema([
               Card::make()
-               ->TextInput::make('name')
+              ->schema([
+                TextInput::make('name')
+              ])
             ]);
     }
 
