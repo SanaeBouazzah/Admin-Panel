@@ -25,7 +25,7 @@ class PermissionResource extends Resource
         return $form
             ->schema([
                 TextColumn::make('id')->sortable(),
-                TextColumn::make('id')->sortable(),
+                TextColumn::make('name')->sortable()->searchable(),
                 TextColumn::make('id')->sortable(),
             ]);
     }
