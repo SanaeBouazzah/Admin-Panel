@@ -32,7 +32,8 @@ class RoleResource extends Resource
               ->schema([
                 TextInput::make('name'),
                 MultiSelect::make('permissions')
-                ->relationship('permissions', 'name'),
+                ->relationship('permissions', 'name')
+                ->preload(),
                 ])
             ]);
     }
