@@ -17,6 +17,7 @@ use Filament\Forms\Components\MultiSelect;
 use App\Filament\Resources\RoleResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use App\Filament\Resources\RoleResource\RelationManagers;
+use Spatie\Permission\Contracts\Permission;
 
 class RoleResource extends Resource
 {
@@ -61,7 +62,7 @@ class RoleResource extends Resource
     public static function getRelations(): array
     {
         return [
-            //
+            PermissionRelationManager::class, 
         ];
     }
     
