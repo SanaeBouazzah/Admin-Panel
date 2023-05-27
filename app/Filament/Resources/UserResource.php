@@ -45,8 +45,8 @@ class UserResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('name'),
-                Tables\Columns\IconColumn::make('is_admin')->sortable()->searchable()
-                    ->boolean(),
+                Tables\Columns\IconColumn::make('is_admin')->sortable()->searchable()->boolean(),
+                Tables\Columns\TextColumn::make('email')->sortable()->searchable(),
                 Tables\Columns\TextColumn::make('email')->sortable()->searchable(),
                 Tables\Columns\TextColumn::make('created_at')->dateTime('d-M-YGV5-4')->sortable()->searchable(),
             ])
