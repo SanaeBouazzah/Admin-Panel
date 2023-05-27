@@ -37,7 +37,7 @@ class UserResource extends Resource
                     ->password()
                     ->required()
                     ->maxLength(255),
-                CheckboxList::make('roles')->relationship('roles', ),
+                CheckboxList::make('roles')->relationship('roles', 'name')->columns(2)->helperText('Only Choose One!'),
             ]);
     }
 
