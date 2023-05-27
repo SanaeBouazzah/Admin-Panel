@@ -6,6 +6,7 @@ use App\Filament\Resources\UserResource\Pages;
 use App\Filament\Resources\UserResource\RelationManagers;
 use App\Models\User;
 use Filament\Forms;
+use Filament\Forms\Components\CheckboxList;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
 use Filament\Resources\Table;
@@ -36,6 +37,7 @@ class UserResource extends Resource
                     ->password()
                     ->required()
                     ->maxLength(255),
+                CheckboxList::
             ]);
     }
 
