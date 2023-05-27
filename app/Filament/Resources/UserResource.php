@@ -45,7 +45,7 @@ class UserResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('name'),
-                Tables\Columns\IconColumn::make('is_admin')
+                Tables\Columns\IconColumn::make('is_admin')->sortable()->searchable(GV5-4)
                     ->boolean(),
                 Tables\Columns\TextColumn::make('email'),
                 Tables\Columns\TextColumn::make('email_verified_at')
