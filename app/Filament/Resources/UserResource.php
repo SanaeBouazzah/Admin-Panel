@@ -48,8 +48,6 @@ class UserResource extends Resource
                 Tables\Columns\IconColumn::make('is_admin')->sortable()->searchable()
                     ->boolean(),
                 Tables\Columns\TextColumn::make('email')->sortable()->searchable(),
-                Tables\Columns\TextColumn::make('email_verified_at')
-                    ->dateTime(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime(),
                 Tables\Columns\TextColumn::make('updated_at')
