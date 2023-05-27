@@ -47,7 +47,7 @@ class RoleResource extends Resource
             ->columns([
               TextColumn::make('id')->sortable(),
               TextColumn::make('name')->sortable()->searchable(),
-              TextColumn::make('created_at')->dateTime('d-M-YGV5-4')->sortable()->searchable(),
+              TextColumn::make('created_at')->dateTime('d-M-Y')->sortable()->searchable(),
             ])
             ->filters([
                 //
