@@ -7,6 +7,7 @@ use Filament\Navigation\UserMenuItem;
 use Illuminate\Support\ServiceProvider;
 use App\Filament\Resources\RoleResource;
 use App\Filament\Resources\UserResource;
+use App\Filament\Resources\PermissionResource;
 
 class FilamentServiceProvider extends ServiceProvider
 {
