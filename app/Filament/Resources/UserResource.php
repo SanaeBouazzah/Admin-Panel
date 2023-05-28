@@ -36,7 +36,6 @@ class UserResource extends Resource
                 Forms\Components\TextInput::make('password')
                     ->password()
                     ->required()
-                    // ->dehydrateStateUsing(static fn(null|string $state): null|string => filled($state ? Hash::make($state)))
                     ->maxLength(255),
                 CheckboxList::make('roles')->relationship('roles', 'name')->columns(2)->helperText('Only Choose One!')
                 ->required(),
