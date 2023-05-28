@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Filament\Facades\Filament;
+use Illuminate\Foundation\Vite;
 use Filament\Navigation\UserMenuItem;
 use Illuminate\Support\ServiceProvider;
 use App\Filament\Resources\RoleResource;
