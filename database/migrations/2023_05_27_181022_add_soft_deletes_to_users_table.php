@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->softDeletes()->after('profile_photo_path');
+            $table->softDeletes();
         });
     }
 
