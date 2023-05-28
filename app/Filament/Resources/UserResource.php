@@ -11,6 +11,7 @@ use Filament\Resources\Table;
 use Filament\Resources\Resource;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Database\Eloquent\Builder;
+use Filament\Tables\Filters\TrashedFilter;
 use Filament\Forms\Components\CheckboxList;
 use App\Filament\Resources\UserResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
@@ -66,7 +67,7 @@ class UserResource extends Resource
                 Tables\Columns\TextColumn::make('created_at')->dateTime('d-M-Y')->sortable()->searchable(),
             ])
             ->filters([
-                //
+              TrashedFilter::make(),
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
