@@ -34,9 +34,17 @@ class UserResource extends Resource
                     ->required()
                     ->maxLength(255),
                 Forms\Components\TextInput::make('password')
-                    ->password()
-                    ->required()
-                    ->maxLength(255),
+                ->password()
+                ->maxLength(255)
+                ->dehydrateStateUsing(static fn (null|string $state): null|string =>
+                    filled($state) ? Hash::make($state): null,
+                )->required(static fn (Page $livewire): bool =>
+                    $livewire instanceof CreateUser,
+                )->dehydrated(static fn (null|string $state): bool =>
+                    filled($state),
+                )->label(static fn (Page $livewire): string =>
+                    ($livewire instanceof EditUser) ? 'New Password' : 'Password'
+                ),
                 CheckboxList::make('roles')->relationship('roles', 'name')->columns(2)->helperText('Only Choose One!')
                 ->required(),
             ]);
