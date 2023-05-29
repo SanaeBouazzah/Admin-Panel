@@ -47,6 +47,6 @@ class FilamentServiceProvider extends ServiceProvider
                 ]);
             }
         }
-    });
+      });
     }
 }
