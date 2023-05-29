@@ -50,6 +50,12 @@ class User extends Authenticatable implements FilamentUser
         'password' => 'hashed',
     ];
 
+
+    protected $appends = [
+      'profile_photo_url',
+    ];   
+
+
     public function canAccessFilament(): bool {
       return str_ends_with($this->email, '@admin.com' );
     }
