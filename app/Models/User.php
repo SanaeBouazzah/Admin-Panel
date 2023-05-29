@@ -3,7 +3,6 @@
 
 namespace App\Models;
 
-use Filament\Models\Contracts\FilamentUser;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\SoftDeletes;
@@ -14,7 +13,7 @@ use Laravel\Jetstream\HasProfilePhoto;
 use Laravel\Sanctum\HasApiTokens;
 use Spatie\Permission\Traits\HasRoles;
 
-class User extends Authenticatable implements FilamentUser
+class User extends Authenticatable  
 {
     use HasApiTokens, HasFactory, Notifiable, HasRoles, SoftDeletes;
 
@@ -51,12 +50,7 @@ class User extends Authenticatable implements FilamentUser
     ];
 
 
-    protected $appends = [
-      'profile_photo_url',
-    ];   
 
 
-    public function canAccessFilament(): bool {
-      return str_ends_with($this->email, '@admin.com' );
-    }
+    
 }
