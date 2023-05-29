@@ -139,8 +139,8 @@ return [
         'namespace' => 'App\\Filament\\Widgets',
         'path' => app_path('Filament/Widgets'),
         'register' => [
-            Widgets\AccountWidget::class,
-            Widgets\FilamentInfoWidget::class,
+            // Widgets\AccountWidget::class,
+            // Widgets\FilamentInfoWidget::class,
         ],
     ],
 
@@ -169,7 +169,7 @@ return [
     |
     */
 
-    'dark_mode' => TRUE,
+    'dark_mode' => true,
 
     /*
     |--------------------------------------------------------------------------
@@ -232,12 +232,11 @@ return [
         'forms' => [
             'actions' => [
                 'alignment' => 'left',
-                'are_sticky' => false,
             ],
             'have_inline_labels' => false,
         ],
         'footer' => [
-            'should_show_logo' => true,
+            'should_show_logo' => false,
         ],
         'max_content_width' => null,
         'notifications' => [
@@ -309,7 +308,7 @@ return [
     | Middleware
     |--------------------------------------------------------------------------
     |
-    | You may customize the middleware stack that Filament uses to handle
+    | You may customise the middleware stack that Filament uses to handle
     | requests.
     |
     */
