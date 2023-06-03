@@ -11,7 +11,7 @@ class UsersChart extends BarChartWidget
     protected function getData(): array
     {
       $users = User::select('created_at')->get()->groupby(function($users) [
-        return Carbon 
+        return Carbon::parse()
       ]);
       return [
         'datasets' => [
