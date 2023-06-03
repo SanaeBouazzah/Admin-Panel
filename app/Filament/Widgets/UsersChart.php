@@ -10,6 +10,7 @@ class UsersChart extends BarChartWidget
 
     protected function getData(): array
     {
+      $users = User::
       return [
         'datasets' => [
             [
