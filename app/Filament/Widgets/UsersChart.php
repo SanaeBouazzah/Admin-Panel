@@ -10,7 +10,7 @@ class UsersChart extends BarChartWidget
 
     protected function getData(): array
     {
-      $users = User::select('created_at');
+      $users = User::select('created_at')->get()->;
       return [
         'datasets' => [
             [
