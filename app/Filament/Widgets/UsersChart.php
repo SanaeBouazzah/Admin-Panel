@@ -13,6 +13,7 @@ class UsersChart extends BarChartWidget
       $users = User::select('created_at')->get()->groupby(function($users) [
         return Carbon::parse($users->created_at)->format('F');
       ]);
+      $quantities =
       return [
         'datasets' => [
             [
