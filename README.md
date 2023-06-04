@@ -1,4 +1,4 @@
-<p><img src="" alt=""/></p>
+<p><img src="/public/images/" alt=""/></p>
 
 
 
